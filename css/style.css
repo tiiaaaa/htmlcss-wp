@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    /* background-color: red; */
+}
+
+/* Classe che stabilisce la larghezza dei blocchi */
+.block-widht {
+    width: 100%;
+}
+
+/* header e section con testo */
+.container > .intestazione {
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: rgb(237, 103, 255);
+}
+
+.text {
+    height: 400px;
+    margin-bottom: 30px;
+    background-color: rgb(253, 208, 123);
+}
+
+.container:first-child main {
+    margin-bottom: 15px;
+    background-color: blue;
+}
+
+.container:first-child footer {
+    height: 80px;
+    background-color: rgba(85, 61, 226, 0.808);
+}
+
+/* Blocchi all'interno del Main */
+
+main {
+    padding-bottom: 20px;
+}
+
+main .main-header {
+    height: 80px;
+    margin-bottom: 20px;
+    background-color: turquoise;
+}
+
+main .aside-block {
+    width: calc(20% - 15px); 
+    height: 500px;
+    float: left;
+    background-color: turquoise;
+}
+
+main .section-block {
+    width: 60%;
+    height: 500px;
+    margin: 0 15px;
+    float: left;
+    background-color: turquoise;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
