@@ -4,69 +4,143 @@
     padding: 0;
 }
 
+.box-clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 .container {
     width: 80%;
     margin: 30px auto;
-    /* background-color: red; */
 }
 
-/* Classe che stabilisce la larghezza dei blocchi */
+/* Classe generica che stabilisce la larghezza dei blocchi */
 .block-widht {
     width: 100%;
 }
 
-/* header e section con testo */
+/* header */
 .container > .intestazione {
-    height: 120px;
     margin-bottom: 30px;
-    background-color: rgb(237, 103, 255);
 }
 
-.jumbotron {
-    height: 400px;
-    margin-bottom: 30px;
-    background-color: rgb(253, 208, 123);
-}
-
-.container:first-child main {
-    margin-bottom: 15px;
-    background-color: blue;
-}
-
-.container:first-child footer {
+.header-logo {
+    width: 15%;
     height: 80px;
-    background-color: rgba(85, 61, 226, 0.808);
+    padding: 5px 20px 5px 5px;
+    margin-bottom: 20px;
+    border-right: 2px solid black;
+}
+
+.header-logo img {
+    width: 100%;
+}
+
+/* Menu nav */
+ul#nav-menu li {
+    display: inline;
+    margin-right: 20px;
+    text-transform: uppercase;
+    font-family: Comic Sans MS, Comic Sans;
+    font-size: 1rem;  
 }
 
 /* Blocchi all'interno del Main */
-
-main {
+.container:first-child main {
+    margin-bottom: 15px;
     padding-bottom: 20px;
+    background-color: blue;
 }
 
+.jumbotron {
+    height: 500px;
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+div.img-musk {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.jumbotron .jumbotron-text {
+    width: 50%;
+    position: absolute;
+    left: 50px;
+    bottom: 80px;
+}
+
+/* header del main */
 main .main-header {
-    height: 80px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     background-color: turquoise;
 }
 
+.main-header h1, p {
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+
+.main-header p {
+    font-size: 0.8rem;
+}
+
+/* blocchi aside e artcle */
 main .aside-block {
     width: calc(20% - 15px); 
-    height: 500px;
     float: left;
     background-color: turquoise;
 }
 
-main .section-block {
+div.block-img {
+    height: 200px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+div#left-img {
+    background-image: url('../img/img-1.jpg');
+}
+
+div#right-img {
+    background-image: url('../img/img-3.jpg');
+}
+
+div.text-wrap {
+    padding-top: 0.7rem;
+}
+
+.text-wrap h4 {
+    line-height: 2rem;
+}
+
+/* blocco centrale article */
+main .article-block {
     width: 60%;
-    height: 500px;
     margin: 0 15px;
     float: left;
     background-color: turquoise;
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+div.article-img {
+    background-image: url('../img/banner-2.jpg');
+}
+
+.container:first-child footer {
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+
+}
+
+footer #heart {
+    font-size: 20px;
 }
